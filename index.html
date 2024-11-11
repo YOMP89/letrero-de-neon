@@ -4,7 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Letrero de Neón</title>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px;
+            background: #0a0a0a;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1),
+                       inset 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-text {
+            color: #fff;
+            font-size: 4em;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #fff,
+                         0 0 10px #fff,
+                         0 0 20px #ff00de,
+                         0 0 30px #ff00de,
+                         0 0 40px #ff00de;
+            margin-bottom: 20px;
+        }
+
+        .blinking-text {
+            color: #fff;
+            font-size: 2em;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #fff,
+                         0 0 10px #0ff,
+                         0 0 20px #0ff,
+                         0 0 30px #0ff;
+            animation: blink 1.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0.5;
+                text-shadow: none;
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 5px #fff,
+                            0 0 10px #0ff,
+                            0 0 20px #0ff,
+                            0 0 30px #0ff,
+                            0 0 40px #0ff;
+            }
+        }
+    </style>
  
 </head>
 <body>
